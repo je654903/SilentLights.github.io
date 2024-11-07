@@ -1,0 +1,134 @@
+/* Remove default margin and padding from the body */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Style for the banner */
+.banner {
+    background-image: url('lights.jpeg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+}
+
+/* Style for the title section (Silent Lights text below the banner) */
+.title-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.title-section h1 {
+    color: black;
+    font-family: 'Cursive', 'Segoe Script', 'Brush Script MT', sans-serif;
+    font-size: 48px;
+    margin: 0;
+}
+
+/* Style for the profile container */
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically on smaller screens */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 20px;
+    background-color: transparent;
+    text-align: center; /* Center the text */
+}
+
+/* Profile image style */
+.profile-image img {
+    width: 150px; /* Smaller profile picture for mobile */
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Add margin below image for spacing */
+}
+
+/* Profile text style */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text horizontally */
+    justify-content: center; /* Ensure the text is vertically centered */
+    text-align: center;
+}
+
+/* Softer text style for the name */
+.profile-info h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600; /* Make the name bolder */
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* Softer text style for the contact information */
+.profile-info p {
+    margin: 5px 0;
+    font-size: 18px; /* Slightly smaller text on mobile */
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Updated section without the circle but with centered text */
+.quote-wrapper {
+    width: 90%; /* Adjust width to 90% of the screen on mobile */
+    max-width: 700px; /* Prevent it from being too wide on larger screens */
+    margin: 20px auto; /* Center the quote section horizontally */
+    padding: 30px; /* Add padding for some space around the text */
+    background-color: #f4f4f4; /* Dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for a more modern look */
+    font-size: 16px; /* Normal font size */
+    line-height: 1.6;
+}
+
+.text {
+    padding: 15px;
+}
+
+.text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row; /* Change to row on larger screens */
+        justify-content: center; /* Center the content horizontally */
+    }
+
+    .profile-image {
+        margin-right: 20px; /* Add space between image and bio text */
+    }
+
+    .quote-wrapper {
+        width: 60%; /* Make quote section smaller on larger screens */
+    }
+
+    .text p {
+        font-size: 18px; /* Slightly increase font size for larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-wrapper {
+        width: 90%; /* Ensure it fits well on mobile */
+        padding: 20px;
+    }
+
+    .text p {
+        font-size: 14px; /* Reduce font size of the quote text */
+    }
+}
